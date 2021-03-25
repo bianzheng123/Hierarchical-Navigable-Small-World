@@ -11,21 +11,21 @@ int main() {
     std::printf("load ground truth\n");
     int gnd_n_vec = 100;
     int gnd_vec_dim = 10;
-    char* path = "../siftsmall/gnd.ivecs";
+    char* path = "../data/siftsmall/gnd.ivecs";
     int* gnd = MultipleHNSW::read_ivecs(gnd_n_vec, gnd_vec_dim, path);
 //    std::printf("%d %d %d %d %d\n", gnd[0], gnd[1], gnd[2], gnd[3], gnd[4]);
 
     std::printf("load query\n");
     int query_n_vec = 100;
     int query_vec_dim = 128;
-    path = "../siftsmall/query.bvecs";
+    path = "../data/siftsmall/query.bvecs";
     int* query = MultipleHNSW::read_bvecs(query_n_vec, query_vec_dim, path);
 //    std::printf("%d %d %d %d %d\n", query[0], query[1], query[2], query[3], query[4]);
 
     std::printf("load base\n");
     int base_n_vec = 10000;
     int base_vec_dim = 128;
-    path = "../siftsmall/base.bvecs";
+    path = "../data/siftsmall/base.bvecs";
     int* base = MultipleHNSW::read_bvecs(base_n_vec, base_vec_dim, path);
 //    std::printf("%d %d %d %d %d\n", base[0], base[1], base[2], base[3], base[4]);
 
